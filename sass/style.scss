@@ -1,4 +1,90 @@
-h1{
-    color: red;
-    font-size: 3rem;
+* {
+    font-family: "Roboto", sans-serif;
+    // outline: 1px solid red;
+}
+
+:root {
+    --bg-grey-color: #F6F6F6;
+    --bg-white-color: #ffffff;
+    --bg-localisation-color : #eaeaea;
+    --bg-footer-color: #353535;
+    --button-main-color : #9356DC;
+    --button-second-color : #FF79DA;
+    --etiquette-main-color : #99E2D0;
+}
+
+body{
+    margin: 0;
+}
+
+/* +++++ HEADER +++++ */ 
+
+.header{
+    &__container-logo{        
+        // outline: 1px solid red;
+        display: flex;
+        justify-content: center;
+        height: 63px;
+    }
+    &__container-logo-image{
+        height: 36px;
+        margin-top: 14px;
+    }
+    &__container-localisation{
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        background-color: var(--bg-localisation-color);     
+        box-shadow: 0px 3px 10px rgba(#000000, .6); 
+    }
+    &__container-localisation-icone{
+        position: relative;
+        right: 20px;/*Permet de garder le centrage du texte*/
+    }
+    &__container-localisation-texte{
+        color: var(--bg-footer-color);
+        font-size: 16px;
+        font-weight: 500;
+    }    
+}
+
+/* +++++ SECTION RESERVER +++++ */
+
+.section-reserver{
+    &__titre{
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        width: 90%;
+        margin: auto;
+    }
+    &__texte{
+        text-align: center;
+        font-weight: 300;
+        font-size: 18px;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    &__bouton{
+        text-align: center;
+        margin: auto;
+        width: 315px;
+        margin-bottom: 50px;
+    }
+    &__bouton--link{
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+        border-radius: 30px;
+        background: linear-gradient(to bottom, #9356DC, #FF79DA);
+        box-shadow: 0px 4px 10px rgba(#000000, .25);
+        cursor: pointer;
+    }
+}
+
+
+.restaurants img {
+    height: 150px;
+    width: 250px;
 }
