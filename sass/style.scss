@@ -96,7 +96,7 @@ body{
     }
 } 
 
-/* +++++ SECTION  FONCTIONNEMENT+++++ */
+/* +++++ SECTION FONCTIONNEMENT+++++ */
 
 .section-fonctionnement{
     padding: 0 30px;
@@ -108,7 +108,7 @@ body{
     }
 
     &__titre{
-        margin: 20px 0 0 0;
+        margin: 20px 0 20px 0;
         font-size: 24px;
         font-weight: 700;
     }
@@ -131,14 +131,13 @@ body{
             color: white;
             font-weight: 400;
             font-size: 14x;
-            border-radius: 100%; // rend le div parfaitement rond
+            border-radius: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 4px rgba(0, 0, 0, 1); 
             position: relative;
-            right: 8px;
-            // top: 5px;
+            right: 10px;
+            // box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25); 
         }
         &-icone{
 
@@ -173,10 +172,12 @@ body{
         border-radius: 20px;
         position: relative;
         margin: 20px 0 0 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+
 
         &-image{
             width: 100%;
-            aspect-ratio: 5/3;
+            aspect-ratio: 6/4;
             object-fit: cover;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
@@ -201,10 +202,14 @@ body{
 
         &-titre{
             margin: 10px 0 0 10px;
+            font-size: 18px;
+            font-weight: 700;
         }
 
         &-texte{
             margin: 5px 0px 10px 10px;
+            font-size: 17px;
+            font-weight: 300;
         }
 
         &-coeur-vide,
@@ -237,11 +242,29 @@ body{
     }
 }
 
-
 /* +++++ FOOTER +++++ */
 
 .section-footer{
-    margin-top: 100px;
-    padding: 0 20px;
+    margin: 0 0 0 0;
+    padding: 20px;
+    background-color: var(--bg-footer-color);
+    color: white;
+    
+    &__lien{
+        margin: 8px 0;
 
+        &-icone1{
+            margin: 0 10px 0 0;
+        }
+
+        &-icone2{
+            margin: 0 4px 0 0;
+        }
+        
+        &-texte{
+            font-size: 16px;
+            text-decoration: none;
+            color: white;            
+        }
+    }
 }
