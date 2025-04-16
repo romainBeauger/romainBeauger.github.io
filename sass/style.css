@@ -143,6 +143,10 @@ body {
   margin: 20px 0 0 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+.section-restaurants__carte-lien {
+  text-decoration: none;
+  color: #000000;
+}
 .section-restaurants__carte-image {
   width: 100%;
   aspect-ratio: 6/4;
