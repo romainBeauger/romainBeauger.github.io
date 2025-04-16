@@ -85,7 +85,7 @@ body {
 /* +++++ SECTION  FONCTIONNEMENT+++++ */
 .section-fonctionnement {
   padding: 0 30px;
-  background: var(--bg-white-color);
+  background-color: var(--bg-white-color);
 }
 .section-fonctionnement__contenu {
   display: flex;
@@ -122,7 +122,80 @@ body {
   position: relative;
   right: 8px;
 }
-.restaurants img {
-  height: 150px;
-  width: 250px;
+/* +++++ SECTION RESTAURANTS +++++ */
+.section-restaurants {
+  background-color: var(--bg-grey-color);
+  padding: 0 20px;
+}
+.section-restaurants__contenu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 50px 0;
+}
+.section-restaurants__titre {
+  margin: 40px 0 0 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+.section-restaurants__carte {
+  background-color: var(--bg-white-color);
+  border-radius: 20px;
+  position: relative;
+  margin: 20px 0 0 0;
+}
+.section-restaurants__carte-image {
+  width: 100%;
+  aspect-ratio: 5/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.section-restaurants__carte-etiquette {
+  width: 70px;
+  background-color: var(--etiquette-main-color);
+  position: absolute;
+  top: 0;
+  right: 10px;
+  padding: 6px;
+  border-radius: 5px;
+  color: #3d8665;
+  font-weight: 600;
+}
+.section-restaurants__carte-etiquette--display3, .section-restaurants__carte-etiquette--display4 {
+  display: none;
+}
+.section-restaurants__carte-titre {
+  margin: 10px 0 0 10px;
+}
+.section-restaurants__carte-texte {
+  margin: 5px 0px 10px 10px;
+}
+.section-restaurants__carte-coeur-vide, .section-restaurants__carte-coeur-plein {
+  position: absolute;
+  bottom: 40px;
+  right: 25px;
+  transition: opacity 0.01s ease, transform 0.5s ease;
+}
+.section-restaurants__carte-coeur-vide {
+  z-index: 2;
+}
+.section-restaurants__carte-coeur-vide:hover {
+  opacity: 0;
+  cursor: pointer;
+}
+.section-restaurants__carte-coeur-plein {
+  z-index: 2;
+  opacity: 0;
+}
+.section-restaurants__carte-coeur-plein:hover {
+  opacity: 1;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+/* +++++ FOOTER +++++ */
+.section-footer {
+  margin-top: 100px;
+  padding: 0 20px;
 }/*# sourceMappingURL=style.css.map */
