@@ -21,21 +21,22 @@ body{
 
 .header{
     &__container-logo{        
-        // outline: 1px solid red;
         display: flex;
         justify-content: center;
         height: 63px;
     }
     &__container-logo-image{
         height: 36px;
-        margin-top: 14px;
+        margin: 20px 0 0 0;
     }
     &__container-localisation{
+        margin: 10px 0 0 0;
         display: flex;
         align-items: center;
         justify-content: center;  
+        margin-bottom: 5px;
         background-color: var(--bg-localisation-color);     
-        box-shadow: 0px 3px 10px rgba(#000000, .6); 
+        box-shadow: 0px 3px 17px rgba(#000000, .6); 
     }
     &__container-localisation-icone{
         position: relative;
@@ -51,35 +52,100 @@ body{
 /* +++++ SECTION RESERVER +++++ */
 
 .section-reserver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+    background: var(--bg-grey-color);
+
+    &__contenu{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__titre{
-        text-align: center;
-        font-weight: 700;
-        font-size: 20px;
-        width: 90%;
-        margin: auto;
+                
+        &-h1{
+            margin: 20px 0px 0px 0px;
+            font-weight: 700;
+            font-size: 24px;
+        }
     }
     &__texte{
         text-align: center;
         font-weight: 300;
         font-size: 18px;
-        width: 90%;
-        margin: auto;
-        margin-bottom: 50px;
+        margin: 20px 0 0 0;
     }
     &__bouton{
-        text-align: center;
-        margin: auto;
-        width: 315px;
-        margin-bottom: 50px;
-    }
-    &__bouton--link{
+        // text-align: center;
+        // margin: auto;
+        // width: 315px;
+        // margin-bottom: 70px;
+        margin: 20px 0 50px 0;
         text-decoration: none;
         color: white;
-        padding: 20px;
+        padding: 15px;
         border-radius: 30px;
-        background: linear-gradient(to bottom, #9356DC, #FF79DA);
+        background: linear-gradient(to top left, #9356DC, #FF79DA);
         box-shadow: 0px 4px 10px rgba(#000000, .25);
         cursor: pointer;
+        
+    }
+} 
+
+/* +++++ SECTION  FONCTIONNEMENT+++++ */
+
+.section-fonctionnement{
+    padding: 0 30px;
+    background: var(--bg-white-color);
+    
+    &__contenu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__titre{
+        margin: 20px 0 0 0;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &__bouton{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        background-color: var(--bg-grey-color);
+        margin-bottom: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+        padding: 10px 0;
+        
+
+        &-pastille{
+            width: 22px;
+            height: 22px;
+            background-color: var(--button-main-color);
+            color: white;
+            font-weight: 400;
+            font-size: 14x;
+            border-radius: 100%; // rend le div parfaitement rond
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 1); 
+            position: relative;
+            right: 8px;
+            // top: 5px;
+        }
+        &-icone{
+
+        }
+        &-texte{
+
+        }
     }
 }
 

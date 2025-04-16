@@ -24,14 +24,16 @@ body {
 }
 .header__container-logo-image {
   height: 36px;
-  margin-top: 14px;
+  margin: 20px 0 0 0;
 }
 .header__container-localisation {
+  margin: 10px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5px;
   background-color: var(--bg-localisation-color);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.6);
 }
 .header__container-localisation-icone {
   position: relative;
@@ -44,37 +46,82 @@ body {
 }
 
 /* +++++ SECTION RESERVER +++++ */
-.section-reserver__titre {
+.section-reserver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 0 30px;
+  background: var(--bg-grey-color);
+}
+.section-reserver__contenu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-reserver__titre-h1 {
+  margin: 20px 0px 0px 0px;
   font-weight: 700;
-  font-size: 20px;
-  width: 90%;
-  margin: auto;
+  font-size: 24px;
 }
 .section-reserver__texte {
   text-align: center;
   font-weight: 300;
   font-size: 18px;
-  width: 90%;
-  margin: auto;
-  margin-bottom: 50px;
+  margin: 20px 0 0 0;
 }
 .section-reserver__bouton {
-  text-align: center;
-  margin: auto;
-  width: 315px;
-  margin-bottom: 50px;
-}
-.section-reserver__bouton--link {
+  margin: 20px 0 50px 0;
   text-decoration: none;
   color: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 30px;
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
 
+/* +++++ SECTION  FONCTIONNEMENT+++++ */
+.section-fonctionnement {
+  padding: 0 30px;
+  background: var(--bg-white-color);
+}
+.section-fonctionnement__contenu {
+  display: flex;
+  flex-direction: column;
+}
+.section-fonctionnement__titre {
+  margin: 20px 0 0 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+.section-fonctionnement__bouton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--bg-grey-color);
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+}
+.section-fonctionnement__bouton-pastille {
+  width: 22px;
+  height: 22px;
+  background-color: var(--button-main-color);
+  color: white;
+  font-weight: 400;
+  font-size: 14x;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px rgb(0, 0, 0);
+  position: relative;
+  right: 8px;
+}
 .restaurants img {
   height: 150px;
   width: 250px;
