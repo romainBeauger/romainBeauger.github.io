@@ -30,20 +30,29 @@ body {
 }
 .section-header__icone {
   position: absolute;
-  left: 17px;
+  left: 27px;
   top: 17px;
+}
+.section-header .header__container-image {
+  position: relative;
+  z-index: 1;
 }
 .section-header .header__container-image-menu {
   width: 100%;
-  aspect-ratio: 2/1;
+  aspect-ratio: 2/1.2;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 /* +++++ MENUS +++++*/
 .section-menu {
+  position: relative;
+  z-index: 2;
+  margin-top: -45px;
   padding: 0 20px;
   background-color: var(--bg-grey-color);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   /* +++++ CARTE +++++*/
 }
 .section-menu__container-titre-icone {
@@ -51,7 +60,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 .section-menu__titre {
   font-family: "Shrikhand", serif;
@@ -61,7 +69,8 @@ body {
 }
 .section-menu__coeur-vide, .section-menu__coeur-plein {
   position: absolute;
-  right: 0px;
+  top: 45px;
+  right: 60px;
   transition: opacity 0.01s ease, transform 0.5s ease;
 }
 .section-menu__coeur-vide {
@@ -88,7 +97,7 @@ body {
 .section-menu__titre-plats {
   font-size: 16px;
   font-weight: 300;
-  margin: 30px 0 20px 0;
+  margin: 30px 0 8px 0;
   position: relative;
 }
 .section-menu__titre-plats::after {
@@ -101,7 +110,7 @@ body {
 }
 .section-menu__card-plat {
   background-color: var(--bg-white-color);
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
 }
 .section-menu__nom-plat {
@@ -113,7 +122,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 .section-menu__texte-plat {
   font-size: 15px;
@@ -132,7 +141,7 @@ body {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
-  margin: 20px 0 50px 0;
+  margin: 30px 0 30px 0;
   width: 40%;
   text-decoration: none;
   color: white;
@@ -141,4 +150,26 @@ body {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+
+/* +++++ FOOTER +++++ */
+.section-footer {
+  margin: 0 0 0 0;
+  padding: 20px;
+  background-color: var(--bg-footer-color);
+  color: white;
+}
+.section-footer__lien {
+  margin: 8px 0;
+}
+.section-footer__lien-icone1 {
+  margin: 0 10px 0 0;
+}
+.section-footer__lien-icone2 {
+  margin: 0 4px 0 0;
+}
+.section-footer__lien-texte {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=style_menus.css.map */

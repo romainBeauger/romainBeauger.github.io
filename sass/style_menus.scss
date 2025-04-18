@@ -38,6 +38,7 @@ $breakpoints: (
 
 body{
     margin: 0;
+    // background-color: var(--bg-grey-color);
 }
 
 /* +++++ HEADER +++++*/ 
@@ -54,18 +55,19 @@ body{
     
     &__icone{
         position: absolute;
-        left: 17px;
+        left: 27px;
         top : 17px
     }
 
 
 .header__container-image{
-    
-    &-menu{
-        
-    width: 100%;
-    aspect-ratio: 2/1;
-    object-fit: cover;        
+    position: relative;
+    z-index: 1;
+
+    &-menu{        
+        width: 100%;
+        aspect-ratio: 2/1.2;
+        object-fit: cover;        
     }
 }
 }
@@ -73,15 +75,19 @@ body{
 /* +++++ MENUS +++++*/ 
 
 .section-menu{
+    position: relative;
+    z-index: 2;
+    margin-top: -45px;
     padding: 0 20px;
     background-color: var(--bg-grey-color);
-
-    &__container-titre-icone{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    
+    &__container-titre-icone{   
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        position: relative;
     }
     
     &__titre{
@@ -94,8 +100,8 @@ body{
     &__coeur-vide,
     &__coeur-plein{
         position: absolute;
-        // bottom: 40px;
-        right : 0px;    
+        top: 45px;
+        right : 60px;    
         transition: opacity 0.01s ease, transform 0.5s ease;        
     }
 
@@ -131,7 +137,7 @@ body{
     &__titre-plats{
         font-size: 16px;
         font-weight:300;
-        margin: 30px 0 20px 0;
+        margin: 30px 0 8px 0;
         position: relative;
 
         &::after {
@@ -146,7 +152,7 @@ body{
 
     &__card-plat{
         background-color: var(--bg-white-color);
-        padding: 20px;
+        padding: 10px;
         border-radius: 20px;
     }
 
@@ -159,7 +165,7 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 8px;
+        margin-top: 4px;
     }
     &__texte-plat{
         font-size: 15px;
@@ -175,11 +181,14 @@ body{
     &__container-bouton{
         text-align: center;      
     }
+
+// <!-- +++++ BOUTON COMMANDER +++++ -->   
+
     &__bouton{
         display: inline-block;
         font-size: 16px;
         font-weight: 500;
-        margin: 20px 0 50px 0;
+        margin: 30px 0 30px 0;
         width: 40%;
         text-decoration: none;
         color: white;
@@ -190,4 +199,31 @@ body{
         cursor: pointer;        
     }
     
+}
+
+/* +++++ FOOTER +++++ */
+    
+.section-footer{
+    margin: 0 0 0 0;
+    padding: 20px;
+    background-color: var(--bg-footer-color);
+    color: white;
+    
+    &__lien{
+        margin: 8px 0;
+
+        &-icone1{
+            margin: 0 10px 0 0;
+        }
+
+        &-icone2{
+            margin: 0 4px 0 0;
+        }
+        
+        &-texte{
+            font-size: 16px;
+            text-decoration: none;
+            color: white;            
+        }
+    }
 }
