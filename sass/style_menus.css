@@ -115,7 +115,7 @@ body {
     position: absolute;
     bottom: -4px;
     left: 0%;
-    width: 7%;
+    width: 40px;
     border-bottom: 3px solid var(--etiquette-main-color);
   }
   .section-menu__card-plat {
@@ -283,7 +283,7 @@ body {
     position: absolute;
     bottom: -4px;
     left: 0%;
-    width: 10%;
+    width: 40px;
     border-bottom: 3px solid var(--etiquette-main-color);
   }
   .section-menu__card-plat {

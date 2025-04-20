@@ -157,7 +157,7 @@ body{
             position: absolute;
             bottom: -4px;
             left: 0%; // Décalage horizontal
-            width: 7%; // Longueur de la bordure
+            width: 40px; // Longueur de la bordure
             border-bottom: 3px solid var(--etiquette-main-color);
           }
     }
@@ -366,7 +366,7 @@ body{
             position: absolute;
             bottom: -4px;
             left: 0%; // Décalage horizontal
-            width: 10%; // Longueur de la bordure
+            width: 40px; // Longueur de la bordure
             border-bottom: 3px solid var(--etiquette-main-color);
           }
     }
