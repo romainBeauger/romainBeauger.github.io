@@ -167,29 +167,76 @@ body{
         padding: 10px;
         border-radius: 20px;
         box-shadow: 0px 4px 15px rgba(#000000, 0.1);
+        position: relative;
+        overflow: hidden;  
+        
+        // Barre verte en pseudo-élément
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0;
+            right: 0;
+            top: 0;
+            background-color: #99e2d0;
+            transition: width 250ms ease-in-out;
+            z-index: 1;
+        }     
+        &-nom{
+            font-size: 18px;
+            font-weight:500;
+            margin: 0 0 0 0;
+        }
+        &-containertxtprix{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 4px;
+            position: relative;
+            flex: 1;
+            z-index: 2;
+        }
+        &-texte{
+            display: block;
+            text-overflow: ellipsis;
+            font-size: 15px;
+            font-weight:300;
+            margin: 0 0 0 0;
+        }
+        &-prix{
+            font-size: 15px;
+            font-weight:700;
+            margin: 0 0 0 0;
+            position: relative;
+            // z-index: 3;
+            transition: transform 250ms ease-in-out;
+        }
+
+        &-check{      
+            border-radius: 100%;
+            padding: 0px 2px;
+            background-color: rgba(whitesmoke, 1);      
+            color: var(--etiquette-main-color);
+            position: absolute;
+            right: -50px;
+            bottom: 10px;
+            transition: all 250ms ease-in-out;
+        }
+
+        &:hover{
+            cursor: pointer;            
+            &::before{
+                width: 10%;
+            }
+            .section-menu__card-plat-prix{
+                transform: translateX(-150%);
+            }
+            .section-menu__card-plat-check{
+                transform: translateX(-52px);
+            }
+        } 
     }
 
-    &__nom-plat{
-        font-size: 18px;
-        font-weight:500;
-        margin: 0 0 0 0;
-    }
-    &__texte-prix{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 4px;
-    }
-    &__texte-plat{
-        font-size: 15px;
-        font-weight:300;
-        margin: 0 0 0 0;
-    }
-    &__prix-plat{
-        font-size: 15px;
-        font-weight:700;
-        margin: 0 0 0 0;
-    }
 
     &__container-bouton{
         text-align: center;      
@@ -375,30 +422,79 @@ body{
         background-color: var(--bg-white-color);
         padding: 10px;
         border-radius: 20px;
-        box-shadow: 0px 4px 15px rgba(#000000, 0.1);
+        box-shadow: 0px 4px 15px rgba(#000000, 0.1);  
+        position: relative;
+        overflow: hidden;      
+
+        // Barre verte en pseudo-élément
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0;
+            right: 0;
+            top: 0;
+            background-color: #99e2d0;
+            transition: width 250ms ease-in-out;
+            z-index: 1;
+        }     
+        &-nom{
+            font-size: 18px;
+            font-weight:500;
+            margin: 0 0 0 0;
+        }
+        &-containertxtprix{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 4px;
+            position: relative;
+            flex: 1;
+            z-index: 2;
+        }
+        &-texte{
+            font-size: 15px;
+            font-weight:300;
+            margin: 0 0 0 0;
+        }
+        &-prix{
+            font-size: 15px;
+            font-weight:700;
+            margin: 0 0 0 0;
+            position: relative;
+            // z-index: 3;
+            transition: transform 250ms ease-in-out;
+        }
+
+        &-check{      
+            border-radius: 100%;
+            padding: 0px 2px;
+            background-color: rgba(whitesmoke, 1);      
+            color: var(--etiquette-main-color);
+            position: absolute;
+            right: -50px;
+            bottom: 10px;
+            transition: all 250ms ease-in-out;
+        }
+
+         &:hover{
+             &::before{
+                 width: 10%;
+             }
+
+            }
+            
+            &:hover 
+            &-prix{
+            transform: translateX(-35px);
+        }   
+
+        &:hover 
+            &-check{
+            transform: translateX(-50px);
+        }    
     }
 
-    &__nom-plat{
-        font-size: 18px;
-        font-weight:500;
-        margin: 0 0 0 0;
-    }
-    &__texte-prix{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 4px;
-    }
-    &__texte-plat{
-        font-size: 15px;
-        font-weight:300;
-        margin: 0 0 0 0;
-    }
-    &__prix-plat{
-        font-size: 15px;
-        font-weight:700;
-        margin: 0 0 0 0;
-    }
 
     &__container-bouton{
         text-align: center;      
