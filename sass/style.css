@@ -88,6 +88,10 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
   }
+  .section-reserver__bouton:hover {
+    background: linear-gradient(to top left, #955cdb, #ff8de0);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  }
   /* +++++ SECTION FONCTIONNEMENT+++++ */
   .section-fonctionnement {
     padding: 0 30px;
@@ -302,6 +306,10 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     width: 218px;
+  }
+  .section-reserver__bouton:hover {
+    background: linear-gradient(to top left, #955cdb, #ff8de0);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
   }
   /* +++++ SECTION FONCTIONNEMENT+++++ */
   .section-fonctionnement {

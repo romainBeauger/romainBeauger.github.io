@@ -120,7 +120,11 @@ body{
             background: linear-gradient(to top left, #9356DC, #FF79DA);
             box-shadow: 0px 4px 10px rgba(#000000, .25);
             cursor: pointer;
-            
+
+            &:hover{
+                background: linear-gradient(to top left,lighten(#9258da, 1%), lighten(#FF79DA, 4%));
+                box-shadow: 0px 4px 15px rgba(#000000, 0.4);
+                }            
         }
     } 
     
@@ -381,7 +385,12 @@ body{
             background: linear-gradient(to top left, #9356DC, #FF79DA);
             box-shadow: 0px 4px 10px rgba(#000000, .25);
             cursor: pointer;
-            width: 218px;            
+            width: 218px; 
+            
+            &:hover{
+            background: linear-gradient(to top left,lighten(#9258da, 1%), lighten(#FF79DA, 4%));
+            box-shadow: 0px 4px 15px rgba(#000000, 0.4);
+            }
         }
     } 
     
