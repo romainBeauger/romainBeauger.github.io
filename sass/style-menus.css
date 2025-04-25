@@ -152,8 +152,6 @@ body {
     z-index: 2;
   }
   .section-menu__card-plat-texte {
-    display: block;
-    text-overflow: ellipsis;
     font-size: 15px;
     font-weight: 300;
     margin: 0 0 0 0;
@@ -166,8 +164,8 @@ body {
     transition: transform 250ms ease-in-out;
   }
   .section-menu__card-plat-check {
-    border-radius: 100%;
-    padding: 0px 2px;
+    border-radius: 50%;
+    padding: 2px 4px 0px 4px;
     background-color: whitesmoke;
     color: var(--etiquette-main-color);
     position: absolute;
@@ -179,13 +177,19 @@ body {
     cursor: pointer;
   }
   .section-menu__card-plat:hover::before {
-    width: 10%;
+    width: 50px;
   }
   .section-menu__card-plat:hover .section-menu__card-plat-prix {
-    transform: translateX(-150%);
+    transform: translateX(-45px);
   }
   .section-menu__card-plat:hover .section-menu__card-plat-check {
-    transform: translateX(-52px);
+    transform: translateX(-55px);
+  }
+  .section-menu__card-plat:hover .section-menu__card-plat-texte {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 75%;
   }
   .section-menu__container-bouton {
     text-align: center;
@@ -375,7 +379,7 @@ body {
   }
   .section-menu__card-plat-check {
     border-radius: 100%;
-    padding: 0px 2px;
+    padding: 2px 4px 0px 4px;
     background-color: whitesmoke;
     color: var(--etiquette-main-color);
     position: absolute;
@@ -384,13 +388,13 @@ body {
     transition: all 250ms ease-in-out;
   }
   .section-menu__card-plat:hover::before {
-    width: 10%;
+    width: 50px;
   }
   .section-menu__card-plat:hover .section-menu__card-plat-prix {
-    transform: translateX(-35px);
+    transform: translateX(-50px);
   }
   .section-menu__card-plat:hover .section-menu__card-plat-check {
-    transform: translateX(-50px);
+    transform: translateX(-55px);
   }
   .section-menu__container-bouton {
     text-align: center;

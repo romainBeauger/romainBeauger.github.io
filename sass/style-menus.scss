@@ -197,11 +197,9 @@ body{
             z-index: 2;
         }
         &-texte{
-            display: block;
-            text-overflow: ellipsis;
             font-size: 15px;
             font-weight:300;
-            margin: 0 0 0 0;
+            margin: 0 0 0 0;            
         }
         &-prix{
             font-size: 15px;
@@ -213,8 +211,8 @@ body{
         }
 
         &-check{      
-            border-radius: 100%;
-            padding: 0px 2px;
+            border-radius: 50%;
+            padding: 2px 4px 0px 4px;
             background-color: rgba(whitesmoke, 1);      
             color: var(--etiquette-main-color);
             position: absolute;
@@ -226,13 +224,19 @@ body{
         &:hover{
             cursor: pointer;            
             &::before{
-                width: 10%;
+                width: 50px;
             }
             .section-menu__card-plat-prix{
-                transform: translateX(-150%);
+                transform: translateX(-45px);
             }
             .section-menu__card-plat-check{
-                transform: translateX(-52px);
+                transform: translateX(-55px);
+            }
+            .section-menu__card-plat-texte{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 75%; 
             }
         } 
     }
@@ -468,7 +472,7 @@ body{
 
         &-check{      
             border-radius: 100%;
-            padding: 0px 2px;
+            padding: 2px 4px 0px 4px;
             background-color: rgba(whitesmoke, 1);      
             color: var(--etiquette-main-color);
             position: absolute;
@@ -477,22 +481,17 @@ body{
             transition: all 250ms ease-in-out;
         }
 
-         &:hover{
-             &::before{
-                 width: 10%;
-             }
-
+        &:hover{
+            &::before{
+                width: 50px;
             }
-            
-            &:hover 
-            &-prix{
-            transform: translateX(-35px);
-        }   
-
-        &:hover 
-            &-check{
-            transform: translateX(-50px);
-        }    
+            .section-menu__card-plat-prix{
+                transform: translateX(-50px);
+            }
+            .section-menu__card-plat-check{
+                transform: translateX(-55px);
+            }
+        }
     }
 
 
