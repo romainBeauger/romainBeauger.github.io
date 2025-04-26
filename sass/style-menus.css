@@ -31,6 +31,7 @@ body {
     position: relative;
   }
   .section-header__icone {
+    color: #353535;
     position: absolute;
     left: 27px;
     top: 17px;
@@ -112,6 +113,16 @@ body {
     font-weight: 300;
     margin: 30px 0 8px 0;
     position: relative;
+    animation: slideCards 800ms ease-in-out;
+  }
+  .section-menu__titre-plats--1 {
+    animation-delay: 250ms;
+  }
+  .section-menu__titre-plats--2 {
+    animation-delay: 500ms;
+  }
+  .section-menu__titre-plats--3 {
+    animation-delay: 750ms;
   }
   .section-menu__titre-plats::after {
     content: "";
@@ -128,6 +139,18 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideCards 800ms ease-out forwards;
+  }
+  .section-menu__card-plat--1 {
+    animation-delay: 200ms;
+  }
+  .section-menu__card-plat--2 {
+    animation-delay: 400ms;
+  }
+  .section-menu__card-plat--3 {
+    animation-delay: 600ms;
   }
   .section-menu__card-plat::before {
     content: "";
@@ -188,11 +211,12 @@ body {
   .section-menu__card-plat:hover .section-menu__card-plat-check {
     transform: translateX(-55px);
   }
-  .section-menu__card-plat:hover .section-menu__card-plat-texte {
+  .section-menu__card-plat:hover .section-menu__card-plat-texte,
+  .section-menu__card-plat:hover .section-menu__card-plat-nom {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 75%;
+    max-width: 77%;
   }
   .section-menu__container-bouton {
     text-align: center;
@@ -226,15 +250,17 @@ body {
     margin: 8px 0;
   }
   .section-footer__lien-icone1 {
+    color: white;
     margin: 0 10px 0 0;
   }
   .section-footer__lien-icone2 {
+    color: white;
     margin: 0 4px 0 0;
   }
   .section-footer__lien-texte {
+    color: white;
     font-size: 16px;
     text-decoration: none;
-    color: white;
   }
 }
 @media (min-width: 1024px) {
@@ -248,6 +274,7 @@ body {
     position: relative;
   }
   .section-header__icone {
+    color: #353535;
     position: absolute;
     left: 27px;
     top: 17px;
@@ -333,6 +360,16 @@ body {
     font-weight: 300;
     margin: 30px 0 8px 0;
     position: relative;
+    animation: slideCards 800ms ease-in-out;
+  }
+  .section-menu__titre-plats--1 {
+    animation-delay: 250ms;
+  }
+  .section-menu__titre-plats--2 {
+    animation-delay: 500ms;
+  }
+  .section-menu__titre-plats--3 {
+    animation-delay: 750ms;
   }
   .section-menu__titre-plats::after {
     content: "";
@@ -349,6 +386,18 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideCards 800ms ease-out forwards;
+  }
+  .section-menu__card-plat--1 {
+    animation-delay: 200ms;
+  }
+  .section-menu__card-plat--2 {
+    animation-delay: 400ms;
+  }
+  .section-menu__card-plat--3 {
+    animation-delay: 600ms;
   }
   .section-menu__card-plat::before {
     content: "";
@@ -452,17 +501,29 @@ body {
     margin: 0px 0;
   }
   .section-footer__lien-icone1 {
+    color: white;
     margin: 0 10px 0 0;
   }
   .section-footer__lien-icone2 {
+    color: white;
     margin: 0 4px 0 0;
   }
   .section-footer__lien-texte {
+    color: white;
     font-size: 16px;
     text-decoration: none;
-    color: white;
   }
   .section-footer__lien-texte--mentions {
     margin-left: 20px; /*margin left à gauche de Mentions Légales sur Desktop*/
+  }
+}
+@keyframes slideCards {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }/*# sourceMappingURL=style-menus.css.map */

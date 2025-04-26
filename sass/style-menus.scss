@@ -56,6 +56,7 @@ body{
     }
     
     &__icone{
+        color: #353535;
         position: absolute;
         left: 27px;
         top : 17px
@@ -106,7 +107,7 @@ body{
         font-family: "Shrikhand", serif;
         font-size: 28px;
         font-weight: 400;
-        margin: 30px 0 0 10px;
+        margin: 30px 0 0 10px;      
     }
 
     &__coeur-vide,
@@ -156,6 +157,15 @@ body{
         margin: 30px 0 8px 0;
         position: relative;
 
+          // Animation titre plats
+          animation: slideCards 800ms ease-in-out ;
+
+          @for $i from 1 through 3 {
+              &--#{$i} {
+                animation-delay: $i * 250ms;
+              }
+            }
+
         &::after {
             content: "";
             position: absolute;
@@ -173,6 +183,17 @@ body{
         box-shadow: 0px 4px 15px rgba(#000000, 0.1);
         position: relative;
         overflow: hidden;  
+
+        // Animation cards
+        opacity : 0;
+        transform: translateX(-100px);
+        animation: slideCards 800ms ease-out forwards;
+        
+        @for $i from 1 through 3 {
+            &--#{$i} {
+              animation-delay: $i * 200ms;
+            }
+          }
         
         // Barre verte en pseudo-élément
         &::before {
@@ -236,11 +257,12 @@ body{
             .section-menu__card-plat-check{
                 transform: translateX(-55px);
             }
-            .section-menu__card-plat-texte{
+            .section-menu__card-plat-texte,
+            .section-menu__card-plat-nom{
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                max-width: 75%; 
+                max-width: 77%; 
             }
         } 
     }
@@ -286,24 +308,24 @@ body{
         margin: 8px 0;
 
         &-icone1{
+            color: white;
             margin: 0 10px 0 0;
         }
 
         &-icone2{
+            color: white;
             margin: 0 4px 0 0;
         }
         
         &-texte{
+            color: white;            
             font-size: 16px;
             text-decoration: none;
-            color: white;            
         }
     }
 }
     
 }
-
-
 
 @include respond-to(desktop){
 
@@ -320,6 +342,7 @@ body{
     }
     
     &__icone{
+        color: #353535;
         position: absolute;
         left: 27px;
         top : 17px
@@ -415,7 +438,7 @@ body{
         flex-direction: column;
         gap: 10px;
         width: 50%; /*100% en mobile*/
-        margin: auto; /*en Desktop uniquement pour centrer la carte*/
+        margin: auto; /*en Desktop uniquement pour centrer la carte*/       
     }
 
     &__titre-plats{
@@ -423,6 +446,15 @@ body{
         font-weight:300;
         margin: 30px 0 8px 0;
         position: relative;
+
+        // Animation titre
+        animation: slideCards 800ms ease-in-out ;
+
+        @for $i from 1 through 3 {
+            &--#{$i} {
+              animation-delay: $i * 250ms;
+            }
+          }
 
         &::after {
             content: "";
@@ -440,7 +472,18 @@ body{
         border-radius: 20px;
         box-shadow: 0px 4px 15px rgba(#000000, 0.1);  
         position: relative;
-        overflow: hidden;      
+        overflow: hidden;    
+
+        // Animation cards
+        opacity : 0;
+        transform: translateX(-100px);
+        animation: slideCards 800ms ease-out forwards;
+        
+        @for $i from 1 through 3 {
+            &--#{$i} {
+              animation-delay: $i * 200ms;
+            }
+          }
 
         // Barre verte en pseudo-élément
         &::before {
@@ -563,17 +606,19 @@ body{
             margin: 0px 0;
     
             &-icone1{
+                color: white;
                 margin: 0 10px 0 0;
             }
     
             &-icone2{
+                color: white;
                 margin: 0 4px 0 0;
             }
             
             &-texte{
+                color: white;   
                 font-size: 16px;
                 text-decoration: none;
-                color: white;   
                 
                 &--mentions{
                     margin-left: 20px; /*margin left à gauche de Mentions Légales sur Desktop*/
@@ -583,3 +628,14 @@ body{
     }
 }
 
+// KEYFRAMES 
+@keyframes slideCards{
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
