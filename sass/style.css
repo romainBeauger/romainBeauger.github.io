@@ -20,6 +20,104 @@ body {
   margin: 0;
 }
 
+.loader-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: hideLoader 1s forwards;
+  animation-delay: 3s;
+  overflow: hidden;
+  position: fixed; /* <-- Important pour ne pas pousser le site vers le bas */
+  top: 0;
+  left: 0;
+  background: white; /* ou la couleur que tu veux pendant le chargement */
+  z-index: 9999;
+}
+
+.load {
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1vh;
+  gap: 1vw;
+}
+.load__bar {
+  background-color: #15DEA5;
+  height: 100%;
+  width: 3vh;
+  animation: bars 1000ms backwards infinite ease-in-out alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--1-inv {
+  animation-delay: 1700ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+  animation-play-state: running;
+}
+.load__bar--1-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--2-inv {
+  animation-delay: 580ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+  animation-play-state: running;
+}
+.load__bar--2-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--3-inv {
+  animation-delay: 615ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+  animation-play-state: running;
+}
+.load__bar--3-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--4-inv {
+  animation-delay: 2255ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+  animation-play-state: running;
+}
+.load__bar--4-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+.load__bar--5-inv {
+  animation-delay: 2380ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+  animation-play-state: running;
+}
+.load__bar--5-inv:hover {
+  animation-play-state: paused;
+}
+
+.site-content {
+  opacity: 0;
+  animation: showSite 0.1s forwards;
+  animation-delay: 3s;
+}
+
 @media (min-width: 300px) {
   /* +++++ HEADER +++++ */
   .header__container-logo {
@@ -417,8 +515,9 @@ body {
     font-weight: 300;
   }
   .section-restaurants__carte-coeur-vide, .section-restaurants__carte-coeur-plein {
+    font-size: 25px;
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     right: 25px;
     transition: opacity 0.01s ease, transform 0.5s ease;
   }
@@ -481,5 +580,35 @@ body {
   }
   .section-footer__lien-texte--mentions {
     margin-left: 20px; /*margin left à gauche de Mentions Légales sur Desktop*/
+  }
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes hideLoader {
+  0% {
+    opacity: 1;
+    pointer-events: auto; /* On autorise interactions pendant le chargement */
+  }
+  90% {
+    opacity: 0;
+    pointer-events: auto; /* On autorise interactions pendant le chargement */
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none; /* Et on confirme */
+  }
+}
+@keyframes showSite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
