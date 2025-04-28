@@ -23,6 +23,104 @@ body {
 }
 
 /*+++++ LOADER +++++*/
+.loader-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: hideLoader 1s forwards;
+  animation-delay: 3s;
+  overflow: hidden;
+  position: fixed; /* <-- Important pour ne pas pousser le site vers le bas */
+  top: 0;
+  left: 0;
+  background: white; /* ou la couleur que tu veux pendant le chargement */
+  z-index: 9999;
+}
+
+.load {
+  width: 30vh;
+  height: 22vh;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1vh;
+  gap: 1vw;
+}
+.load__bar {
+  background-color: #9356DC;
+  height: 100%;
+  width: 5vh;
+  animation: bars 1000ms backwards infinite ease-in-out alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--1-inv {
+  animation-delay: 1490ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+  animation-play-state: running;
+}
+.load__bar--1-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--2-inv {
+  animation-delay: 730ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+  animation-play-state: running;
+}
+.load__bar--2-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--3-inv {
+  animation-delay: 1065ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+  animation-play-state: running;
+}
+.load__bar--3-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--4-inv {
+  animation-delay: 1565ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+  animation-play-state: running;
+}
+.load__bar--4-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+.load__bar--5-inv {
+  animation-delay: 1060ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+  animation-play-state: running;
+}
+.load__bar--5-inv:hover {
+  animation-play-state: paused;
+}
+
+.site-content {
+  opacity: 0;
+  animation: showSite 0.1s forwards;
+  animation-delay: 3s;
+}
+
 /* +++++ HEADER +++++ */
 .header__container-logo {
   display: flex;

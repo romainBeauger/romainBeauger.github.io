@@ -40,59 +40,59 @@ body{
 }
 
 /*+++++ LOADER +++++*/
-// .loader-container{
-//   height: 100vh;
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   animation: hideLoader 1s forwards;
-//   animation-delay: 3s;
-//   overflow: hidden;
-//   position: fixed; /* <-- Important pour ne pas pousser le site vers le bas */
-//   top: 0;
-//   left: 0;
-//   background: white; /* ou la couleur que tu veux pendant le chargement */
-//   z-index: 9999;
-// }
+.loader-container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: hideLoader 1s forwards;
+  animation-delay: 3s;
+  overflow: hidden;
+  position: fixed; /* <-- Important pour ne pas pousser le site vers le bas */
+  top: 0;
+  left: 0;
+  background: white; /* ou la couleur que tu veux pendant le chargement */
+  z-index: 9999;
+}
 
-// .load{
-//   width: 30vh;
-//   height: 22vh;
-//   display: flex;
-//   justify-content: space-evenly;
-//   gap: 1vh;
-//   gap: 1vw;
+.load{
+  width: 30vh;
+  height: 22vh;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1vh;
+  gap: 1vw;
     
-//   &__bar{
-//       background-color: #9356DC;
-//       height: 100%;
-//       width: 5vh;
-//       animation: bars 1000ms backwards infinite ease-in-out alternate;
+  &__bar{
+      background-color: #9356DC;
+      height: 100%;
+      width: 5vh;
+      animation: bars 1000ms backwards infinite ease-in-out alternate;
 
-//       @for $i from 1 through 5{
-//         &--#{$i}{
-//           animation-delay: 200ms * $i;
-//         }
-//         &--#{$i}-inv{
-//           animation-delay: 200ms * $i +random($limit: 100) * 15ms;
-//           animation-direction: alternate-reverse;
-//           background-color: #FF79DA;
-//           animation-play-state:running;
-//           &:hover{
-//             animation-play-state: paused;
-//           }
-//         }
-//       }
-//     }
-//   }
+      @for $i from 1 through 5{
+        &--#{$i}{
+          animation-delay: 200ms * $i;
+        }
+        &--#{$i}-inv{
+          animation-delay: 200ms * $i +random($limit: 100) * 15ms;
+          animation-direction: alternate-reverse;
+          background-color: #FF79DA;
+          animation-play-state:running;
+          &:hover{
+            animation-play-state: paused;
+          }
+        }
+      }
+    }
+  }
 
-// .site-content {
-//     opacity: 0;
-//     animation: showSite 0.1s forwards;
-//     animation-delay: 3s;
-//   }
+.site-content {
+    opacity: 0;
+    animation: showSite 0.1s forwards;
+    animation-delay: 3s;
+  }
 
 /* +++++ HEADER +++++ */     
 .header{
