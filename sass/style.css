@@ -58,7 +58,7 @@ body {
   animation-delay: 200ms;
 }
 .load__bar--1-inv {
-  animation-delay: 755ms;
+  animation-delay: 305ms;
   animation-direction: alternate-reverse;
   background-color: #0E397F;
   animation-play-state: running;
@@ -70,7 +70,7 @@ body {
   animation-delay: 400ms;
 }
 .load__bar--2-inv {
-  animation-delay: 790ms;
+  animation-delay: 1255ms;
   animation-direction: alternate-reverse;
   background-color: #0E397F;
   animation-play-state: running;
@@ -82,7 +82,7 @@ body {
   animation-delay: 600ms;
 }
 .load__bar--3-inv {
-  animation-delay: 1065ms;
+  animation-delay: 900ms;
   animation-direction: alternate-reverse;
   background-color: #0E397F;
   animation-play-state: running;
@@ -94,7 +94,7 @@ body {
   animation-delay: 800ms;
 }
 .load__bar--4-inv {
-  animation-delay: 2090ms;
+  animation-delay: 920ms;
   animation-direction: alternate-reverse;
   background-color: #0E397F;
   animation-play-state: running;
@@ -106,7 +106,7 @@ body {
   animation-delay: 1000ms;
 }
 .load__bar--5-inv {
-  animation-delay: 2230ms;
+  animation-delay: 1840ms;
   animation-direction: alternate-reverse;
   background-color: #0E397F;
   animation-play-state: running;
@@ -225,7 +225,7 @@ body {
   background-color: var(--button-main-color);
   color: white;
   font-weight: 400;
-  font-size: 14x;
+  font-size: 14px;
   border-radius: 100%;
   display: flex;
   align-items: center;
